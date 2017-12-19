@@ -17,17 +17,28 @@
       <li><a href="http://vue-loader.vuejs.org/" target="_blank">vue-loader</a></li>
       <li><a href="https://github.com/vuejs/awesome-vue" target="_blank">awesome-vue</a></li>
     </ul>
+
+    <group>
+      <cell title="title" value="value"></cell>
+    </group>    
   </div>
 </template>
 
 <script>
+import { Group, Cell } from 'vux'
+
+
 export default {
   name: 'HelloWorld',
   data () {
     return {
       msg: 'Welcome to Your Vue.js App'
     }
-  }
+  },
+  components: {
+    Group,
+    Cell
+  }  
 }
 </script>
 
