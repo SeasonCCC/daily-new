@@ -9,14 +9,14 @@ Vue.use(Router)
 
 export default new Router({
     routes: [
-    {
-        path: '/',
-        name: 'HelloWorld',
-        components: {
-            default: HelloWorld,
-            footer: Footer,
-            header: Header
-        }
-    }		
+        {
+            path: '/',
+            name: 'HelloWorld',
+            components: {
+                default: HelloWorld,
+                footer: Footer,
+                header: Header
+            }
+        }		
     ]
 })
