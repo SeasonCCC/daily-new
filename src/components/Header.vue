@@ -12,13 +12,6 @@ import XHeader from 'vux/src/components/x-header'
 
 
 export default {
-    created(){
-        this.$axios.get('/api').then((body) => {
-            // console.log(body.data)
-            var contentArr = this.$api.phase(body.data)
-            console.log(contentArr)
-        })
-    },
     components: {
         XHeader
     }

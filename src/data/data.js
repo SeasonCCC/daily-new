@@ -7,21 +7,12 @@ var cheerio = require('cheerio')
 var data = require('./data.json')
 
 
-var getDataList = (body) => {
-    // console.log(body)
+var getDataList = (body, type) => {
     const $ = cheerio.load(body)
-    const config = data.juejin
+    const config = data[type]
     var $body = $('body').find(config.main)
     let content = []
-    // let regx = /http/
-    // console.log($body)
     $body.find(config.item).each((i, value) => {
-        // console.log(value)
-        // if (!regx.test($(value).find(config.link).attr('href'))) {
-        //     var href = url.parse(config.address, 'true').protocol +'//'+ url.parse(config.address, 'true').host + '/' + $(value).find(config.link).attr('href')
-        // }else{
-        //     var href = $(value).find(config.link).attr('href')
-        // }
         content.push({
             title: $(value).find(config.title).text(),
             href: $(value).find(config.link).attr('href'),
@@ -31,12 +22,9 @@ var getDataList = (body) => {
 }
 
 
-
-
-
 export default {
-    phase: (body) => {
-        return getDataList(body)
+    phase: (body, type) => {
+        return getDataList(body, type)
     },
 }
 

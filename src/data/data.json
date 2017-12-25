@@ -1,51 +1,51 @@
 {
-	"oschina": {
-		"address": "https://www.oschina.net/blog?classification=428612",
-		"main": "#topsOfRecommend",
-		"item": ".item .box-aw",
-		"title": "header h2",
-		"link": "header a"
-	},
-	"juejin": {
-		"address": "https://juejin.im/welcome/frontend",
-		"main": ".entry-list",
-		"item": ".item .content-box",
-		"title": ".title-row a",
-		"link": ".title-row a"
-	},
-	"segmentfault": {
-		"address": "https://segmentfault.com/t/html",
-		"main": "#qa",
-		"item": ".stream-list__item",
-		"title": ".title",
-		"link": ".title a"
-	},
-	"jobbole": {
-		"address": "http://web.jobbole.com/all-posts/",
-		"main": "#archive",
-		"item": ".floated-thumb",
-		"title": ".archive-title",
-		"link": ".archive-title"
-	},
-	"qdfuns": {
-		"address": "http://www.qdfuns.com/notes",
-		"main": "#column-left",
-		"item": "section",
-		"title": ".media-heading a:eq(1)",
-		"link": ".media-heading a:eq(1)"
-	},
-	"csdn": {
-		"address": "http://geek.csdn.net/frontend",
-		"main": "#geek_list",
-		"item": ".geek_list",
-		"title": ".title",
-		"link": ".title"
-	},
-	"toutiao": {
-		"address": "https://toutiao.io/c/fe?f=new",
-		"main": ".posts",
-		"item": ".content",
-		"title": ".title a",
-		"link": ".title a"
-	}
+    "oschina": {
+        "address": "https://www.oschina.net/blog?classification=428612",
+        "main": "#topsOfRecommend",
+        "item": ".item .box-aw",
+        "title": "header h2",
+        "link": "header a"
+    },
+    "juejin": {
+        "address": "https://juejin.im/welcome/frontend",
+        "main": ".entry-list",
+        "item": ".item .content-box",
+        "title": ".title-row a",
+        "link": ".title-row a"
+    },
+    "segmentfault": {
+        "address": "https://segmentfault.com/t/html",
+        "main": "#qa",
+        "item": ".stream-list__item",
+        "title": ".title",
+        "link": ".title a"
+    },
+    "jobbole": {
+        "address": "http://web.jobbole.com/all-posts/",
+        "main": "#archive",
+        "item": ".floated-thumb",
+        "title": ".archive-title",
+        "link": ".archive-title"
+    },
+    "qdfuns": {
+        "address": "http://www.qdfuns.com/notes",
+        "main": "#column-left",
+        "item": "section",
+        "title": ".media-heading a:eq(1)",
+        "link": ".media-heading a:eq(1)"
+    },
+    "csdn": {
+        "address": "http://geek.csdn.net/frontend",
+        "main": "#geek_list",
+        "item": ".geek_list",
+        "title": ".title",
+        "link": ".title"
+    },
+    "toutiao": {
+        "address": "https://toutiao.io/c/fe?f=new",
+        "main": ".posts",
+        "item": ".content",
+        "title": ".title a",
+        "link": ".title a"
+    }
 }
