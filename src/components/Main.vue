@@ -1,6 +1,8 @@
 <template>
-    <div>
-        <router-view />
+    <div class="main-container">
+        <transition name="move-left" mode="out-in">
+            <router-view class="router-view" />
+        </transition>
     </div>
 </template>
 
@@ -17,18 +19,40 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h1, h2 {
-    font-weight: normal;
+.main-container{
+    position: absolute;
+    padding-top: 46px;
+    padding-bottom: 55px;
+    height: 100%;
+    width: 100%;
+    padding-bottom: 50px;
+    overflow: auto;
+    background: #d1d1d1;
 }
-ul {
-    list-style-type: none;
-    padding: 0;
+.router-view {
+    position: absolute;
+    width: 100%;
 }
-li {
-    display: inline-block;
-    margin: 0 10px;
+
+.move-right-enter {
+    transform: translate3d(-100%, 0, 0);
 }
-a {
-    color: #42b983;
+.move-right-enter-active{
+    transition: all 500ms;
+}
+.move-right-leave-active{
+    transition: all 500ms;
+    transform: translate3d(100%, 0, 0);
+}
+
+.move-left-enter {
+    transform: translate3d(100%, 0, 0);
+}
+.move-left-enter-active{
+    transition: all 500ms;
+}
+.move-left-leave-active{
+    transition: all 500ms;
+    transform: translate3d(-100%, 0, 0);
 }
 </style>

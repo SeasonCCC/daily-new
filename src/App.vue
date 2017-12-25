@@ -18,6 +18,8 @@ export default {
 body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, p, blockquote, table, th, td, embed, object {
     padding: 0;
     margin: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
 }
 table {
     border-collapse: collapse;
@@ -45,5 +47,10 @@ q:before, q:after {
 }
 a, ins {
     text-decoration: none;
+}
+#app{
+    position: absolute;
+    height: 100%;
+    width: 100%;
 }
 </style>
