@@ -36,11 +36,9 @@ export default {
 
 /* animation */
 .move-right-enter {
-    top: 100%;
-    /*transform: translate3d(-100%, 0, 0);*/
+    transform: translate3d(-100%, 0, 0);
 }
 .move-right-enter-active{
-    top: 0;
     transition: all 500ms;
 }
 .move-right-leave-active{
