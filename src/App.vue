@@ -1,8 +1,10 @@
 <template>
     <div id="app">
+
         <router-view name="header" />
-        <router-view />
+        <router-view></router-view>
         <router-view name="footer" />
+
     </div>
 </template>
 
@@ -52,5 +54,15 @@ a, ins {
     position: absolute;
     height: 100%;
     width: 100%;
+}
+.weui-tabbar {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    position: absolute;
+    z-index: 500;
+    bottom: 0;
+    width: 100%;
+    background-color: #F7F7FA;
 }
 </style>

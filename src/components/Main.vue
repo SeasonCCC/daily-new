@@ -1,19 +1,23 @@
 <template>
     <div class="main-container">
-        <transition name="move-left" mode="out-in">
+        <transition :name="'move' + {path}" mode="out-in">
             <router-view class="router-view" />
         </transition>
     </div>
 </template>
 
 <script>
+import store from '@/vuex/store'
+import {mapState} from 'vuex'
+
+
 export default {
-    name: 'Main',
-    data () {
-        return {
-            msg: 'Welcome to Your Vue.js App'
-        }
-    }
+    computed: {
+        ...mapState({
+            path: state => state.path
+        }),
+    },
+    store
 }
 </script>
 
@@ -27,7 +31,6 @@ export default {
     width: 100%;
     padding-bottom: 50px;
     overflow: auto;
-    background: #d1d1d1;
 }
 .router-view {
     position: relative;
