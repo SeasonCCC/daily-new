@@ -5,11 +5,17 @@ Vue.use(Vuex);
 
 
 const state = {
-    path: 1
+    prevPath: 0
+}
+
+const mutations = {
+    updatePath (state, nowPath) {
+        state.prevPath = nowPath;
+    }
 }
 
 
-
 export default new Vuex.Store({
-	state
+    state,
+    mutations
 })

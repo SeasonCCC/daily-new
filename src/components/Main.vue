@@ -1,6 +1,6 @@
 <template>
     <div class="main-container">
-        <transition :name="'move' + {path}" mode="out-in">
+        <transition :name="'move-' + (direation == 'left' ? 'left' : 'right')" mode="out-in">
             <router-view class="router-view" />
         </transition>
     </div>
@@ -8,14 +8,29 @@
 
 <script>
 import store from '@/vuex/store'
-import {mapState} from 'vuex'
+import {mapState, mapMutations} from 'vuex'
 
 
 export default {
+    updated () {
+        if (this.$route.params.num > this.prevPath) {
+            this.direation = 'left'
+            this.updatePath(this.$route.params.num)
+        }else if(this.$route.params.num < this.prevPath){
+            this.direation = 'right'
+            this.updatePath(this.$route.params.num)
+        }
+    },
+    data () {
+        return {
+            direation: 'left'
+        }
+    },
     computed: {
-        ...mapState({
-            path: state => state.path
-        }),
+        ...mapState(['prevPath']),
+    },
+    methods: {
+        ...mapMutations(['updatePath'])
     },
     store
 }

@@ -55,14 +55,4 @@ a, ins {
     height: 100%;
     width: 100%;
 }
-.weui-tabbar {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: flex;
-    position: absolute;
-    z-index: 500;
-    bottom: 0;
-    width: 100%;
-    background-color: #F7F7FA;
-}
 </style>
