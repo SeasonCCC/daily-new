@@ -4,6 +4,10 @@
         <li v-for="content in contentArr">
             {{content.title}}
         </li>
+        <li v-for="content in contentArr">
+            {{content.title}}
+        </li>
+        
     </div>
 </template>
 

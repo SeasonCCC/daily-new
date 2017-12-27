@@ -12,7 +12,8 @@ import {mapState, mapMutations} from 'vuex'
 
 
 export default {
-    updated () {
+    beforeUpdate () {
+        // console.log(this.$route.params.num, this.prevPath)
         if (this.$route.params.num > this.prevPath) {
             this.direation = 'left'
             this.updatePath(this.$route.params.num)
@@ -44,7 +45,6 @@ export default {
     padding-bottom: 55px;
     height: 100%;
     width: 100%;
-    padding-bottom: 50px;
     overflow: auto;
 }
 .router-view {

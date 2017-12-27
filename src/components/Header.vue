@@ -18,9 +18,10 @@ export default {
 
 <style scoped>
 .vux-header{ 
-    width: 100%;
     position: absolute;
     left: 0px;
     top: 0px;
-    z-index: 100; }
+    z-index: 100; 
+    width: 100%;    
+}
 </style>
