@@ -1,18 +1,20 @@
 <template>
     <div>
         <loading :show="show" :text="text"></loading>
-        <li v-for="content in contentArr">
+        <group>
+        <cell-box v-for="(content, index) in contentArr" :key="content.id" :link="content.link">
             {{content.title}}
-        </li>
-        <li v-for="content in contentArr">
-            {{content.title}}
-        </li>
-        
+        </cell-box>
+        </group>
     </div>
 </template>
 
 <script>
 import Loading from 'vux/src/components/loading'
+import Group from 'vux/src/components/group'
+import Cell from 'vux/src/components/cell'
+import CellBox from 'vux/src/components/cell-box'
+
 
 export default {
     created () {
@@ -30,7 +32,10 @@ export default {
         }
     },
     components: {
-        loading: Loading
+        Loading,
+        Group,
+        Cell,
+        CellBox
     }
 }
 </script>

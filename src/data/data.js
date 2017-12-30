@@ -14,6 +14,7 @@ var getDataList = (body, type) => {
     let content = []
     $body.find(config.item).each((i, value) => {
         content.push({
+            id: i,
             title: $(value).find(config.title).text(),
             href: $(value).find(config.link).attr('href'),
         })
