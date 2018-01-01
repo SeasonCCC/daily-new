@@ -1,6 +1,6 @@
 <template>
         <tabbar class="tabbar">
-            <tabbar-item :link="{name: 'frontEnd', params: { num: 0 }}">
+            <tabbar-item :link="{name: 'frontEnd', params: { num: 0 }}" selected>
                 <img slot="icon" src="../assets/front-end.png" />
                 <span slot="label">Front end</span>
             </tabbar-item>

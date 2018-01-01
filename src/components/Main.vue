@@ -13,7 +13,6 @@ import {mapState, mapMutations} from 'vuex'
 
 export default {
     beforeUpdate () {
-        // console.log(this.$route.params.num, this.prevPath)
         if (this.$route.params.num > this.prevPath) {
             this.direation = 'left'
             this.updatePath(this.$route.params.num)

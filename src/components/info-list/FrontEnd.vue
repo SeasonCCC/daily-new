@@ -2,7 +2,7 @@
     <div>
         <loading :show="show" :text="text"></loading>
         <group>
-        <cell-box v-for="(content, index) in contentArr" :key="content.id" :link="content.link">
+        <cell-box v-for="(content, index) in contentArr" :key="content.id" :link="content.href">
             {{content.title}}
         </cell-box>
         </group>
@@ -39,3 +39,10 @@ export default {
     }
 }
 </script>
+
+<style scoped>
+.weui-cell_access.vux-cell-box {
+    padding-right: 20px;
+    position: relative;
+}    
+</style>

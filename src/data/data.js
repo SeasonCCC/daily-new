@@ -16,7 +16,7 @@ var getDataList = (body, type) => {
         content.push({
             id: i,
             title: $(value).find(config.title).text(),
-            href: $(value).find(config.link).attr('href'),
+            href: 'https://juejin.im'+$(value).find(config.link).attr('href'),
         })
     })
     return content
