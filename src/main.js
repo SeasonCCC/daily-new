@@ -6,10 +6,9 @@ import router from './router'
 import api from './data/data'
 import axios from 'axios'
 
-
 Vue.config.productionTip = false
-Vue.prototype.$axios=axios
-Vue.prototype.$api=api
+Vue.prototype.$axios = axios
+Vue.prototype.$api = api
 
 /* eslint-disable no-new */
 new Vue({

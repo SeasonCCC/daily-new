@@ -1,14 +1,14 @@
 <template>
   <tabbar class="tabbar">
-    <tabbar-item :link="{name: 'frontEnd', params: { num: 0 }}" selected>
+    <tabbar-item :link="{name: 'frontEnd', params: { num: 0 }}" :selected="$route.path === '/' || $route.path === '/frontEnd'">
       <img slot="icon" src="../assets/front-end.png" />
       <span slot="label">Front end</span>
     </tabbar-item>
-    <tabbar-item :link="{name: 'sports', params: { num: 1 }}">
+    <tabbar-item :link="{name: 'sports', params: { num: 1 }}" :selected="$route.path === '/sports'">
       <img slot="icon" src="../assets/sports.png" />
       <span slot="label">Sports</span>
     </tabbar-item>
-    <tabbar-item :link="{name: 'car', params: { num: 2 }}">
+    <tabbar-item :link="{name: 'car', params: { num: 2 }}" :selected="$route.path === '/car'">
       <img slot="icon" src="../assets/car.png" />
       <span slot="label">Car</span>
     </tabbar-item>
@@ -19,14 +19,24 @@
 import Tabbar from 'vux/src/components/tabbar/tabbar'
 import TabbarItem from 'vux/src/components/tabbar/tabbar-item'
 import Icon from 'vux/src/components/icon'
-
+import store from '@/vuex/store'
+import {mapState} from 'vuex'
 
 export default {
+  data () {
+    return {
+      path: '/'
+    }
+  },
+  computed: {
+    ...mapState(['prevPath'])
+  },
   components: {
     Tabbar,
     TabbarItem,
-    Icon,
+    Icon
   },
+  store
 }
 </script>
 

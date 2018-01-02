@@ -1,8 +1,7 @@
-import Vue from 'vue';
-import Vuex from 'vuex';
+import Vue from 'vue'
+import Vuex from 'vuex'
 
-Vue.use(Vuex);
-
+Vue.use(Vuex)
 
 const state = {
   prevPath: 0
@@ -10,10 +9,9 @@ const state = {
 
 const mutations = {
   updatePath (state, nowPath) {
-    state.prevPath = nowPath;
+    state.prevPath = nowPath
   }
 }
-
 
 export default new Vuex.Store({
   state,

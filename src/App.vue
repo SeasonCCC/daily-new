@@ -8,10 +8,10 @@
   </div>
 </template>
 
-
 <script>
 import Drawer from 'vux/src/components/drawer'
 import ViewBox from 'vux/src/components/view-box'
+
 export default {
   name: 'app',
   components: {

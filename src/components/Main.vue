@@ -10,15 +10,21 @@
 import store from '@/vuex/store'
 import {mapState, mapMutations} from 'vuex'
 
-
 export default {
   beforeUpdate () {
     if (this.$route.params.num > this.prevPath) {
       this.direation = 'left'
       this.updatePath(this.$route.params.num)
-    }else if(this.$route.params.num < this.prevPath){
+    } else if (this.$route.params.num < this.prevPath) {
       this.direation = 'right'
       this.updatePath(this.$route.params.num)
+    }
+  },
+  created () {
+    if (this.$route.path === '/sports') {
+      this.updatePath(1)
+    } else if (this.$route.path === '/car') {
+      this.updatePath(2)
     }
   },
   data () {
@@ -27,7 +33,7 @@ export default {
     }
   },
   computed: {
-    ...mapState(['prevPath']),
+    ...mapState(['prevPath'])
   },
   methods: {
     ...mapMutations(['updatePath'])

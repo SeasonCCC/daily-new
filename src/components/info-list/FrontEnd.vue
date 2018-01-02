@@ -15,10 +15,9 @@ import Group from 'vux/src/components/group'
 import Cell from 'vux/src/components/cell'
 import CellBox from 'vux/src/components/cell-box'
 
-
 export default {
   created () {
-    this.$axios.get('/api').then((body) => {
+    this.$axios.get('/apiFrontend').then((body) => {
       var contentArr = this.$api.phase(body.data, 'juejin')
       this.contentArr = contentArr
       this.show = false
@@ -42,7 +41,7 @@ export default {
 
 <style scoped>
 .weui-cell_access.vux-cell-box {
-  padding-right: 20px;
+  padding-right: 25px;
   position: relative;
 }    
 </style>
