@@ -11,20 +11,27 @@ module.exports = {
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
     proxyTable: {
-      '/apiFrontend': {
+      '/apiJuejin': {
         target: 'https://juejin.im/welcome/frontend',
         changeOrigin: true,
         pathRewrite: {
-          '^/apiFrontend': '/'
+          '^/apiJuejin': '/'
         }
       },
-      '/apiSports': {
+      '/apiQq': {
         target: 'http://www.qq.com/',
         changeOrigin: true,
         pathRewrite: {
-          '^/apiSports': '/'
+          '^/apiQq': '/'
         }
       },      
+      '/apiSina': {
+        target: 'http://www.sina.com.cn/',
+        changeOrigin: true,
+        pathRewrite: {
+          '^/apiSina': '/'
+        }
+      },         
     },
 
     // Various Dev Server settings

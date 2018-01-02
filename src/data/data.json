@@ -1,15 +1,19 @@
 {
   "juejin": {
-    "address": "https://juejin.im/welcome/frontend",
     "main": ".entry-list",
     "item": ".item .content-box",
     "title": ".title-row a",
     "link": ".title-row a"
   },
-  "sina": {
-    "address": "http://sports.3g.cn/?chn=sports",
+  "qqSports": {
     "main": "#sports",
     "item": [".contentLeft li > a", ".contentRight li > a"],
+    "title": "",
+    "link": ""
+  },
+  "sinaCar": {
+    "main": "#SI_Order_B ul",
+    "item": [".uni-blk-bt ul > a", ".uni-blk-list02 > a"],
     "title": "",
     "link": ""
   }

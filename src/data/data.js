@@ -17,7 +17,17 @@ var getDataList = (body, type) => {
         href: 'https://juejin.im' + $(value).find(config.link).attr('href')
       })
     })
-  } else if (type === 'sina') {
+  } else if (type === 'qqSports') {
+    for (let item of config.item) {
+      $body.find(item).each((i, value) => {
+        content.push({
+          id: content.length + 1,
+          title: $(value).text(),
+          href: $(value).attr('href')
+        })
+      })
+    }
+  } else if (type === 'sinaCar') {
     for (let item of config.item) {
       $body.find(item).each((i, value) => {
         content.push({
@@ -28,6 +38,7 @@ var getDataList = (body, type) => {
       })
     }
   }
+
   return content
 }
 
