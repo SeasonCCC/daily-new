@@ -1,12 +1,12 @@
 <template>
-    <div>
-        <loading :show="show" :text="text"></loading>
-        <group>
-        <cell-box v-for="(content, index) in contentArr" :key="content.id" :link="content.href">
-            {{content.title}}
-        </cell-box>
-        </group>
-    </div>
+  <div>
+    <loading :show="show" :text="text"></loading>
+    <group>
+      <cell-box v-for="(content, index) in contentArr" :key="content.id" :link="content.href">
+        {{content.title}}
+      </cell-box>
+    </group>
+  </div>
 </template>
 
 <script>
@@ -17,32 +17,32 @@ import CellBox from 'vux/src/components/cell-box'
 
 
 export default {
-    created () {
-        this.$axios.get('/api').then((body) => {
-            var contentArr = this.$api.phase(body.data, 'juejin')
-            this.contentArr = contentArr
-            this.show = false
-        })
-    },
-    data () {
-        return {
-            show: true,
-            text: 'Loading',
-            contentArr: []
-        }
-    },
-    components: {
-        Loading,
-        Group,
-        Cell,
-        CellBox
+  created () {
+    this.$axios.get('/api').then((body) => {
+      var contentArr = this.$api.phase(body.data, 'juejin')
+      this.contentArr = contentArr
+      this.show = false
+    })
+  },
+  data () {
+    return {
+      show: true,
+      text: 'Loading',
+      contentArr: []
     }
+  },
+  components: {
+    Loading,
+    Group,
+    Cell,
+    CellBox
+  }
 }
 </script>
 
 <style scoped>
 .weui-cell_access.vux-cell-box {
-    padding-right: 20px;
-    position: relative;
+  padding-right: 20px;
+  position: relative;
 }    
 </style>

@@ -13,23 +13,23 @@ import Car from '@/components/info-list/Car'
 Vue.use(Router)
 
 export default new Router({
-    routes: [
-        {
-            path: '/',
-            components: {
-                default: Main,
-                footer: Footer,
-                header: Header
-            },
-            children: [
-                {path:'/', component: FrontEnd, name: 'frontEnd'},
-                {path:'/sports', component: Sports, name: 'sports'},
-                {path:'/car', component: Car, name: 'car'},
-            ]
-        },
-        {
-            path: '/test',
-            component: Test
-        }
+  routes: [
+  {
+    path: '/',
+    components: {
+      default: Main,
+      footer: Footer,
+      header: Header
+    },
+    children: [
+    {path:'/', component: FrontEnd, name: 'frontEnd'},
+    {path:'/sports', component: Sports, name: 'sports'},
+    {path:'/car', component: Car, name: 'car'},
     ]
+  },
+  {
+    path: '/test',
+    component: Test
+  }
+  ]
 })

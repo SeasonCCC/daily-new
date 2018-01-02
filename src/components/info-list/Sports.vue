@@ -1,15 +1,15 @@
 <template>
-    <div>
-        sports--{{$route.params.num}}
-    </div>
+  <div>
+    sports--{{$route.params.num}}
+  </div>
 </template>
 
 <script>
 export default {
-    name: 'sports'
+  name: 'sports'
 }
 </script>
 
 <style scoped>
-    
+
 </style>

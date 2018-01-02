@@ -1,7 +1,7 @@
 <template>
-    <div>
-        car
-    </div>
+  <div>
+    car
+  </div>
 </template>
 
 <script>

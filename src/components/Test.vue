@@ -3,7 +3,7 @@
     <h1>{{ msg }} -- {{$route.params.username}}</h1>
   </div>
 </template>
- 
+
 <script>
 export default {
   name: 'hi',
@@ -14,8 +14,8 @@ export default {
   }
 }
 </script>
- 
- 
+
+
 <style scoped>
- 
+
 </style>
