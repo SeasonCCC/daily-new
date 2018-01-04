@@ -31,7 +31,14 @@ module.exports = {
         pathRewrite: {
           '^/apiSina': '/'
         }
-      },         
+      },
+      '/apiCar': {
+        target: 'http://news.baidu.com/auto',
+        changeOrigin: true,
+        pathRewrite: {
+          '^/apiCar': '/'
+        }
+      }
     },
 
     // Various Dev Server settings

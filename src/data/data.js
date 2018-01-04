@@ -5,7 +5,7 @@ var data = require('./data.json')
 var getDataList = (body, type) => {
   const $ = cheerio.load(body)
   const config = data[type]
-  var $body = $('body').find(config.main)
+  let $body = $('body').find(config.main).eq(0)
 
   let content = []
 
@@ -27,16 +27,14 @@ var getDataList = (body, type) => {
         })
       })
     }
-  } else if (type === 'sinaCar') {
-    for (let item of config.item) {
-      $body.find(item).each((i, value) => {
-        content.push({
-          id: content.length + 1,
-          title: $(value).text(),
-          href: $(value).attr('href')
-        })
+  } else if (type === 'car') {
+    $body.find(config.item).each((i, value) => {
+      content.push({
+        id: content.length + 1,
+        title: $(value).find(config.title).text(),
+        href: $(value).attr('href')
       })
-    }
+    })
   }
 
   return content

@@ -17,8 +17,8 @@ import CellBox from 'vux/src/components/cell-box'
 
 export default {
   created () {
-    this.$axios.get('/apiSina').then((body) => {
-      var contentArr = this.$api.phase(body.data, 'sinaCar')
+    this.$axios.get('/apiCar').then((body) => {
+      let contentArr = this.$api.phase(body.data, 'car')
       this.contentArr = contentArr
       this.show = false
     })

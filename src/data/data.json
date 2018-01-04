@@ -11,10 +11,10 @@
     "title": "",
     "link": ""
   },
-  "sinaCar": {
-    "main": "#SI_Order_B ul",
-    "item": [".uni-blk-bt ul > a", ".uni-blk-list02 > a"],
-    "title": "",
+  "car": {
+    "main": ".instant-news",
+    "item": "ul a",
+    "title": "span",
     "link": ""
   }
 }
